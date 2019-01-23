@@ -1,5 +1,3 @@
-require "pry"
-
 class School
   attr_reader :name, :roster
   
@@ -26,8 +24,15 @@ class School
     end
   end
   
-  def grade(grade)
-   @student_name
-  end
+  def sort 
+    
+  end  
   
+  def grade(grade)
+    @roster.each do |grades, students|
+      if grades == grade
+        return students
+      end
+    end
   end
+end
